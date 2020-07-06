@@ -73,7 +73,7 @@ def rainbow_leafs():
         for y in range(20):
             # turtle.pencolor(colors[x%7])
             turtle.pencolor(colorss[x%2])
-            turtle.forward(0.5+10+y)
+            turtle.forward(0.5+1+y)
             turtle.left(77 / 9)
         turtle.left(77)
 
@@ -93,7 +93,7 @@ def rainbow_unknown():
             turtle.forward(x/6)
             turtle.left(40)
         turtle.left(100)
-        # turtle.dot(6)
+        turtle.dot(6)
 
     turtle.done()
 
