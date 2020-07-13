@@ -73,7 +73,7 @@ def rainbow_leafs():
         for y in range(20):
             # turtle.pencolor(colors[x%7])
             turtle.pencolor(colorss[x%2])
-            turtle.forward(0.5+1+y)
+            turtle.forward(0.5+10+y)
             turtle.left(77 / 9)
         turtle.left(77)
 
@@ -93,7 +93,53 @@ def rainbow_unknown():
             turtle.forward(x/6)
             turtle.left(40)
         turtle.left(100)
-        turtle.dot(6)
+        # turtle.dot(6)
+
+    turtle.done()
+
+def rainbow_triangle():
+    # background, speed and hide pen while draw
+    turtle.bgcolor('black')
+    turtle.speed('fastest')
+    turtle.hideturtle()
+
+    for x in range(200):
+        # turtle.pencolor(colors[x%7])
+        turtle.pencolor(colorss[x%2])
+        turtle.forward(x*2)
+        turtle.right(121)
+
+    turtle.done()
+
+def rainbow_shell():
+    # background, speed and hide pen while draw
+    turtle.bgcolor('black')
+    turtle.speed('fastest')
+    turtle.hideturtle()
+    
+    size = 1
+    for x in range(50):
+        for y in range(4):
+            # turtle.pencolor(colors[x%7])
+            turtle.pencolor(colorss[x%2])
+            turtle.forward(size+y-1)
+            turtle.right(90)
+        size += 1
+        turtle.right(10)
+
+    turtle.done()
+
+def rainbow_square():
+    # background, speed and hide pen while draw
+    turtle.bgcolor('black')
+    turtle.speed('fastest')
+    turtle.hideturtle()
+    
+    for x in range(360):
+        # turtle.pencolor(colors[x%7])
+        turtle.pencolor(colorss[x%2])
+        turtle.forward(x)
+        turtle.right(91)
 
     turtle.done()
 
@@ -114,7 +160,7 @@ def save_as_png(canvas, fileName):
 
 def main():
     print('(｡^‿^｡) - "what i should draw today ?":\n')
-    print('1 - Spiral\n2 - Star\n3 - flower\n4 - leafs\n5 - unknown')
+    print('1 - spiral\n2 - star\n3 - flower\n4 - leafs\n5 - unknown\n6 - triangle\n7 - shell\n8 - square')
 
     ans = int(input())
 
@@ -133,6 +179,15 @@ def main():
     elif ans == 5:
         fileName = 'turtlepyunknown'
         rainbow_unknown()
+    elif ans == 6:
+        fileName = 'turtlepytriangle'
+        rainbow_triangle()
+    elif ans == 7:
+        fileName = 'turtlepyshell'
+        rainbow_shell()
+    elif ans == 8:
+        fileName = 'turtlepysquare'
+        rainbow_square()
     else:
         print('(⋟﹏⋞) - "sorry, i can\'t make this."')
 
