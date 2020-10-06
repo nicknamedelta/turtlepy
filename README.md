@@ -1,6 +1,6 @@
 # turtlepy
 
-(｡^‿^｡) - "what i should draw today ?"
+(｡^‿^｡) - "what should i draw today ?"
 
 ## What was used ?
 
