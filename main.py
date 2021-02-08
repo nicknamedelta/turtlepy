@@ -87,13 +87,13 @@ def draw(op, name):
 
 
 def save_as_png(canvas, fileName):
-    # save postscipt image 
+    # save postscript image 
     canvas.postscript(file = fileName + '.eps')
 
     # open an eps image 
     img = Image.open(fileName + '.eps')
 
-    # will convert image color to RGBA
+    # will convert image color to RGB
     fig = img.convert('RGB')
 
     # convert eps to png
@@ -109,13 +109,15 @@ def save_as_png(canvas, fileName):
 
 def main():
     print('(｡^‿^｡) - "What should I draw today?":\n')
-    print('1 - spiral\n2 - star\n3 - flower\n4 - leafs\n5 - unknown\n6 - triangle\n7 - shell\n8 - square')
+    print('1 - spiral\n2 - star\n3 - flower\n4 - leafs\n5 - unknown\n6 - triangle\n7 - shell\n8 - square\n0 - exit')
 
     fileNames = ['turtlepyspiral', 'turtlepystar', 'turtlepyflower', 'turtlepyleafs', 'turtlepyunknown', 'turtlepytriangle', 'turtlepyshell', 'turtlepysquare']
     sOp = int(input())
 
-    if (sOp >= 1 or sOp <=8):
+    if (sOp >= 1 and sOp <=8):
         draw(sOp, fileNames[sOp-1])
+    if (sOp == 0):
+        exit()
     else:
         print('(⋟﹏⋞) - "sorry, i can\'t make this."')
 main()
