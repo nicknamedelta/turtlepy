@@ -105,16 +105,16 @@ def save_as_png(canvas, fileName):
     else:
         print('.eps file unknown')
 
-    print('(｡^‿^｡) - "your image has been generated!"')
+    print('(｡^‿^｡) - "Your image has been generated!"')
 
 def main():
-    print('(｡^‿^｡) - "what i should draw today ?":\n')
+    print('(｡^‿^｡) - "What should I draw today?":\n')
     print('1 - spiral\n2 - star\n3 - flower\n4 - leafs\n5 - unknown\n6 - triangle\n7 - shell\n8 - square')
 
     fileNames = ['turtlepyspiral', 'turtlepystar', 'turtlepyflower', 'turtlepyleafs', 'turtlepyunknown', 'turtlepytriangle', 'turtlepyshell', 'turtlepysquare']
     sOp = int(input())
 
-    if sOp >= 1 or sOp <=8:
+    if (sOp >= 1 or sOp <=8):
         draw(sOp, fileNames[sOp-1])
     else:
         print('(⋟﹏⋞) - "sorry, i can\'t make this."')
